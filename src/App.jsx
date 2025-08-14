@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Leftcol from './Leftcol'
+import NumberGrid from './NumberGrid'
+import RightCol from './RightCol'
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         </div>
         <div className="section-2">
           <div className="section-2-inner">
-            <div className="section2-part-1">Section 2 - Part 1 (15%)</div>
-            <div className="section2-part-2">Section 2 - Part 2 (70%)</div>
-            <div className="section2-part-3">Section 2 - Part 3 (15%)</div>
+            <div className="section2-part-1"><Leftcol/></div>
+            <div className="section2-part-2"><NumberGrid/></div>
+            <div className="section2-part-3"><RightCol /></div>
           </div>
         </div>
         <div className="section-3">

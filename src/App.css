@@ -1,3 +1,28 @@
+@media (max-width: 600px) {
+  .section-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    gap: 0;
+  }
+  .section-1, .section-2, .section-3 {
+    padding: 0;
+    min-height: 0;
+    font-size: 0.9rem;
+  }
+  .section-1-inner, .section-2-inner, .section-3-inner {
+    gap: 0;
+  }
+  .part-1, .part-2, .part-3, .part-4,
+  .section2-part-1, .section2-part-2, .section2-part-3,
+  .section3-part-1, .section3-part-2, .section3-part-3 {
+    padding: 2px 4px;
+    font-size: 0.85rem;
+  }
+  .part-1, .section2-part-2, .section3-part-2 {
+    font-size: 1rem;
+  }
+}
 /* --- Cleaned up and overflow restricted for all flex containers and parts --- */
 .section-container {
   width: 100vw;
@@ -45,7 +70,7 @@
   overflow: hidden;
 }
 .section2-part-1 { flex: 0 0 15%; background: #ffe156; }
-.section2-part-2 { flex: 0 0 70%; background: #6a0572; color: #fff; }
+.section2-part-2 { flex: 0 0 70%; background: #f0edf1; color: #fff; }
 .section2-part-3 { flex: 0 0 15%; background: #ff7f50; }
 
 /* Section 3 parts */
@@ -114,7 +139,7 @@
 }
 .section2-part-2 {
   flex: 0 0 70%;
-  background: #6a0572;
+  background: #f0edf0;
   color: #fff;
   display: flex;
   align-items: center;
