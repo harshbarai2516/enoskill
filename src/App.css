@@ -86,13 +86,15 @@
 .section3-part-3 { flex: 0 0 15%; background: #ffde7d; }
 
 /* Root and body restrictions */
-#root, html, body, .fixed-white-screen {
-  width: 100vw;
-  height: 100vh;
+.fixed-white-screen {
+  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   background: #fff;
   overflow: hidden;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* --- End cleaned up section --- */
@@ -214,23 +216,11 @@
   align-items: center;
   justify-content: center;
 }
-#root {
-  width: 100vw;
-  height: 100vh;
+html, body, #root {
   margin: 0;
   padding: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-html, body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  height: 100dvh; /* Modern browsers */
+  height: calc(var(--vh, 1vh) * 100); /* Fallback */
   overflow: hidden;
 }
 
