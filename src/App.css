@@ -1,3 +1,19 @@
+.advance-draw-btn {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font-size: 1rem;
+  background: #1a2d5a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  display: block;
+}
 @media (max-width: 600px) {
   .section-container {
     width: 100vw;
@@ -81,8 +97,8 @@
   justify-content: center;
   overflow: hidden;
 }
-.section3-part-1 { flex: 0 0 15%; background: #b2f7ef; }
-.section3-part-2 { flex: 0 0 70%; background: #f6416c; color: #fff; }
+.section3-part-1 { flex: 0 0 30%; background: #b2f7ef; }
+.section3-part-2 { flex: 0 0 55%; background: #f6416c; color: #fff; }
 .section3-part-3 { flex: 0 0 15%; background: #ffde7d; }
 
 /* Root and body restrictions */
@@ -104,14 +120,14 @@
   flex-direction: row;
 }
 .section3-part-1 {
-  flex: 0 0 15%;
+  flex: 0 0 30%;
   background: #b2f7ef;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section3-part-2 {
-  flex: 0 0 70%;
+  flex: 0 0 55%;
   background: #f6416c;
   color: #fff;
   display: flex;
@@ -202,14 +218,14 @@
   justify-content: center;
 }
 .section-2 {
-  flex: 0 0 60%;
+  flex: 0 0 65%;
   background: #4bb543;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section-3 {
-  flex: 0 0 10%;
+  flex: 0 0 5%;
   background: #009ffd;
   display: flex;
   align-items: center;
