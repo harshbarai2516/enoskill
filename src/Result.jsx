@@ -88,6 +88,8 @@ export default function Result() {
           margin-left: 0.5vw;
           flex-shrink: 0;
         }
+
+        /* 📱 Mobile View Only */
         @media (max-width: 768px) {
           .kohinoor-container {
             width: 100% !important;
@@ -96,26 +98,27 @@ export default function Result() {
             padding: 2px !important;
           }
           .kohinoor-title {
-            font-size: 2.5vw !important;
+            font-size: 2.4vw !important;
             margin-right: 0.3vw !important;
           }
           .kohinoor-boxes {
-            gap: 0.2vw !important;
+            gap: 0.15vw !important;
             overflow: hidden !important;
           }
           .box {
-            font-size: 2.8vw !important;
-            padding: 0.1vw 0.2vw !important;
-            height: 5vw !important;
+            font-size: 2.2vw !important; /* smaller text */
+            padding: 0.05vw 0.15vw !important;
+            height: 4.2vw !important; /* smaller height */
             min-width: 0 !important;
           }
           .box span {
-            font-size: 1vw !important;
-            padding: 0.1vw 0.3vw !important;
-            height: 60% !important;
+            font-size: 0.9vw !important; /* smaller multiplier */
+            padding: 0.05vw 0.2vw !important; /* proportional padding */
+            height: 55% !important;
+            min-width: 1.8vw !important;
           }
           .kohinoor-time {
-            font-size: 1.8vw !important;
+            font-size: 1.6vw !important;
             margin-left: 0.3vw !important;
           }
         }
