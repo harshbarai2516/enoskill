@@ -92,7 +92,8 @@
   margin: 0;
   padding: 0;
   background: #fff;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* --- End cleaned up section --- */
@@ -241,8 +242,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .logo {
