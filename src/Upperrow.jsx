@@ -38,16 +38,15 @@ const UpperRow = () => {
       <style>{`
         .upperrow-container {
           width: 100%;
-          overflow-x: auto; /* allow horizontal scroll on small screens */
+          overflow: hidden;
           box-sizing: border-box;
         }
 
         .upperrow-table {
           border-collapse: separate;
-          border-spacing: 4px; /* small gap between cells */
+          border-spacing: 4px;
           table-layout: fixed;
-          width: max-content;
-          min-width: 100%;
+          width: 100%;
         }
 
         .upperrow-box {
@@ -110,34 +109,41 @@ const UpperRow = () => {
           text-align: center;
         }
 
-        /* Desktop */
-        @media (min-width: 1025px) {
-          .upperrow-box {
-            font-size: clamp(12px, 1vw, 16px);
-          }
-        }
-
-        /* Tablet */
+        /* Auto shrink scaling for smaller devices */
         @media (max-width: 1024px) {
-          .upperrow-box {
-            font-size: clamp(9px, 1vw, 14px);
+          .upperrow-container {
+            transform: scale(0.95);
+            transform-origin: left center;
           }
         }
 
-        /* Mobile - keep one line with scroll */
+        @media (max-width: 900px) {
+          .upperrow-container {
+            transform: scale(0.85);
+          }
+        }
+
         @media (max-width: 767px) {
-          .upperrow-box {
-            font-size: clamp(8px, 2vw, 11px);
-            padding: 2px 4px;
-            border-width: 1px;
+          .upperrow-container {
+            transform: scale(0.75);
           }
         }
 
-        /* Extra Small Mobile */
+        @media (max-width: 600px) {
+          .upperrow-container {
+            transform: scale(0.65);
+          }
+        }
+
         @media (max-width: 480px) {
-          .upperrow-box {
-            font-size: clamp(7px, 2vw, 10px);
-            padding: 1px 3px;
+          .upperrow-container {
+            transform: scale(0.55);
+          }
+        }
+
+        @media (max-width: 360px) {
+          .upperrow-container {
+            transform: scale(0.48);
           }
         }
       `}</style>
