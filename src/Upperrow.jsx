@@ -110,50 +110,49 @@ const UpperRow = () => {
           white-space: nowrap;
         }
 
-        /* ✅ Desktop stays the same */
+        /* Desktop unchanged */
         @media (min-width: 768px) {
           .upperrow-wrapper {
             margin: 0;
           }
         }
 
-        /* 📱 Mobile - new flex-driven layout */
+        /* Mobile - no horizontal scroll */
         @media (max-width: 767px) {
           .upperrow-mobile {
             display: flex;
-            align-items: center;         /* vertically center */
-            min-height: 60px;             /* ensures visible rounded corners */
-            padding-top: 4px;             /* small gap top */
-            padding-bottom: 4px;          /* small gap bottom */
-            background-color: transparent;
-            overflow-x: auto;             /* scroll if needed */
+            flex-wrap: wrap;        /* Allow wrapping instead of scrolling */
+            align-items: center;
+            justify-content: space-between;
+            min-height: 60px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            gap: 6px;               /* space between boxes */
           }
 
           .upperrow-table {
-            width: max-content;           /* don't squish content */
+            display: contents;      /* Table layout replaced by flex items */
           }
 
           .upperrow-box {
-            min-width: max-content;        /* no text clipping */
+            flex: 1 1 calc(33.333% - 6px); /* 3 boxes per row on mobile */
+            min-width: 0;                  /* Allow shrinking to fit */
             font-size: clamp(8px, 2.2vw, 12px);
             padding: 3px 6px;
             border-radius: 10px;
-            height: 100%;
+            height: auto;
           }
 
           .bonus-value {
-            min-width: max-content;
             font-size: clamp(8px, 2.2vw, 12px);
             padding: 2px 6px;
           }
         }
 
-        /* 📱 Very small mobile */
+        /* Extra small mobile */
         @media (max-width: 480px) {
-          .upperrow-mobile {
-            min-height: 65px; /* Slightly more for tiny screens */
-          }
           .upperrow-box {
+            flex: 1 1 calc(50% - 6px); /* 2 boxes per row */
             font-size: clamp(7px, 2vw, 10px);
             padding: 2px 5px;
           }
