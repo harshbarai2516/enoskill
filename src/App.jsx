@@ -4,13 +4,6 @@ import Leftcol from './Leftcol'
 import NumberGrid from './NumberGrid'
 import RightCol from './RightCol'
 
-function setVH() {
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
-}
-window.addEventListener('resize', setVH);
-window.addEventListener('orientationchange', setVH);
-setVH();
-
 
 function App() {
   return (
