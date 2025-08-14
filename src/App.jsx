@@ -6,8 +6,11 @@ import './App.css'
 function App() {
   return (
     <div className="fixed-white-screen">
-      {/* Fixed white screen, no scroll, centered content */}
-      <p>edfe</p>
+      <div className="section-container">
+        <div className="section-1">Section 1 (20%)</div>
+        <div className="section-2">Section 2 (65%)</div>
+        <div className="section-3">Section 3 (15%)</div>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,31 @@
+.section-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-1 {
+  flex: 0 0 20%;
+  background: #f8b400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-2 {
+  flex: 0 0 65%;
+  background: #4bb543;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-3 {
+  flex: 0 0 15%;
+  background: #009ffd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #root {
   width: 100vw;
   height: 100vh;
