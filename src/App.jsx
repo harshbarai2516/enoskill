@@ -4,6 +4,7 @@ import Leftcol from './Leftcol'
 import NumberGrid from './NumberGrid'
 import RightCol from './RightCol'
 import Result from './Result'
+import Filter from './Filter'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <div className="part-1"><Result/></div>
             <div className="part-2">Part 2 (12%)</div>
             <div className="part-3">Part 3 (27%)</div>
-            <div className="part-4">Part 4 (26%)</div>
+            <div className="part-4"> <Filter/> </div>
           </div>
         </div>
         <div className="section-2">

@@ -68,6 +68,7 @@ export default function Result() {
           padding: 0.2vw 0.6vw;
           display: flex;
           align-items: center;
+          justify-content: center;
           height: 80%;
           margin: auto 0;
           text-shadow: 1px 1px 2px #181818ff, 0 0 1px #fff;
