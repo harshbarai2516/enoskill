@@ -3,6 +3,7 @@ import './App.css'
 import Leftcol from './Leftcol'
 import NumberGrid from './NumberGrid'
 import RightCol from './RightCol'
+import Result from './Result'
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <div className="section-container">
         <div className="section-1">
           <div className="section-1-inner">
-            <div className="part-1">Part 1 (40%)</div>
+            <div className="part-1"><Result/></div>
             <div className="part-2">Part 2 (12%)</div>
             <div className="part-3">Part 3 (27%)</div>
             <div className="part-4">Part 4 (26%)</div>
