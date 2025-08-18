@@ -62,6 +62,7 @@ const UpperRow = () => {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          height: 95%; /* Set height to 85% of parent */
         }
 
         .upperrow-box.green {

@@ -10,6 +10,22 @@ export default function Leftcol() {
   ];
   const [selected, setSelected] = useState("1000-1099");
 
+  const checkboxStyle = {
+    width: '40px', // doubled from 20px
+    height: '24px', // doubled from 12px
+    marginRight: '2px'
+  };
+
+  const labelStyle = {
+    fontSize: '1.3em', // Increase font size for labels
+    fontWeight: 'bold',
+    marginLeft: '4px',
+    color: '#222',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  };
+
   return (
     <>
       <style>{`
@@ -149,9 +165,9 @@ export default function Leftcol() {
                   type="checkbox"
                   checked={selected === range}
                   onChange={() => setSelected(range)}
-                  style={{ pointerEvents: "none" }}
+                  style={{ pointerEvents: "none", ...checkboxStyle }}
                 />
-                <span style={{ flex: 1, textAlign: "center" }}>{range}</span>
+                <span style={{ flex: 1, textAlign: "center", ...labelStyle }}>{range}</span>
               </label>
             ))}
           </div>

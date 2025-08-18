@@ -29,13 +29,24 @@ function App() {
           </div>
         </div>
         <div className="section-3">
-          {/* <div className="section-3-inner">
+          <div className="section-3-inner">
             <div className="section3-part-1">
               <button className="advance-draw-btn">Advance Draw F9</button>
             </div>
-            <div className="section3-part-2">Section 3 - Part 2 (70%)</div>
-            <div className="section3-part-3"><LeftBot/></div>
-          </div> */}
+            <div className="section3-part-2">
+              <div className="section3p2-part1"> Last Transaction:<br/> #22081690601 Pt(40) </div>
+              <div className="section3p2-part2"> 
+                  <input type="text" placeholder="Enter Barcode" className="barcode-input" />
+              </div>
+              <div className="section3p2-part3"> 
+                 <button className="buy-now-btn">Buy Now (F6)</button>
+              </div>
+            </div>
+            <div className="section3-part-3">
+                <button className="advance-sum-btn">0</button>
+                  <button className="advance-sum-btn">0</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,3 +54,10 @@ function App() {
 }
 
 export default App
+
+
+            // <div className="section3-part-2">
+            //        Last Transaction :<br/> #22081690601 Pt(40)
+            //    <input type="text" placeholder="Enter Barcode" className="barcode-input" style={{margin:'0 8px'}} />
+            //    <button className="buy-now-btn">Buy Now (F6)</button>
+            // </div>

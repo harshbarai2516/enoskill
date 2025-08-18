@@ -11,7 +11,7 @@ const Filter = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100%',
+    height: '60%', // Set button height to 70% of parent
     boxSizing: 'border-box',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -58,7 +58,7 @@ const Filter = () => {
       {['EVEN', 'ODD', 'CP', 'FP'].map((txt, i) => (
         <div key={i} style={cellStyle(1)}>
           <input type="checkbox" style={checkboxStyle} />
-          <span style={{ color: 'black', fontSize: '11px', textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{txt}</span>
+          <span style={{ color: 'black', fontSize: '15px', textAlign: 'center', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{txt}</span>
         </div>
       ))}
 
@@ -98,6 +98,32 @@ const Filter = () => {
             </div>
           );
         })}
+
+      {/* <style>{`
+        @media (max-width: 599px) {
+          div[style*="flex-direction: row"] {
+            flex-wrap: wrap !important;
+            overflow-x: hidden !important;
+          }
+          button {
+            font-size: 2.5vw !important;
+          }
+          span {
+            font-size: 2.3vw !important;
+          }
+        }
+        @media (min-width: 600px) {
+          button {
+            font-size: 22px !important;
+          }
+          span {
+            font-size: 20px !important;
+          }
+          select {
+            font-size: 22px !important;
+          }
+        }
+      `}</style> */}
     </div>
   );
 };

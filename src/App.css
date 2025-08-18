@@ -1,20 +1,70 @@
-.advance-draw-btn {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 6px 8px;
-  font-size: 1rem;
-  background: #1a2d5a;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  white-space: nowrap;
+.section3p2-part1 {
+  color: #000;
+  font-weight: bold;
+  background: #b2f7ef;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  padding: 2px 6px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  display: block;
+  white-space: normal;
+  word-break: break-all;
+  max-width: 100%;
+  max-height: 100%;
 }
+.section3p2-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: #b2f7ef;
+  flex: 0 0 35%;
+  align-items: center;
+  justify-items: center;
+}
+.section3p2-part3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background:#b2f7ef;
+  flex: 0 0 35%;
+}
+
+@media (min-width: 601px) {
+  .barcode-input {
+    min-width: 220px;
+    font-size: 1rem;
+  }
+  .buy-now-btn {
+    min-width: 260px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 1rem;
+  }
+}
+/* Ensure barcode input and buy now button are the same size */
+
+
 @media (max-width: 600px) {
+  .section3p2-part1 {
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .section3p2-part1 {
+    font-size: 0.85rem;
+    padding: 1px 2px;
+    line-height: 1.05;
+  }
+  
   .section-container {
     width: 100vw;
     height: 100vh;
@@ -76,7 +126,7 @@
 .part-1 { flex: 0 0 40%; background: #ff6f61; }
 .part-2 { flex: 0 0 12%; background: #f7cac9; }
 .part-3 { flex: 0 0 27%; background: #92a8d1; }
-.part-4 { flex: 0 0 26%; background: #034f84; }
+.part-4 { flex: 0 0 26%; background: #e6e8e9; }
 
 /* Section 2 parts */
 .section2-part-1, .section2-part-2, .section2-part-3 {
@@ -97,8 +147,8 @@
   justify-content: center;
   overflow: hidden;
 }
-.section3-part-1 { flex: 0 0 30%; background: #b2f7ef; }
-.section3-part-2 { flex: 0 0 55%; background: #f6416c; color: #fff; }
+.section3-part-1 { flex: 0 0 20%; background: #b2f7ef; }
+.section3-part-2 { flex: 0 0 65%; background: #f6416c; color: #fff; }
 .section3-part-3 { flex: 0 0 15%; background: #ffde7d; }
 
 /* Root and body restrictions */
@@ -120,21 +170,28 @@
   flex-direction: row;
 }
 .section3-part-1 {
-  flex: 0 0 30%;
+  flex: 0 0 20%;
   background: #b2f7ef;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section3-part-2 {
-  flex: 0 0 55%;
-  background: #f6416c;
-  color: #fff;
+  flex: 0 0 65%;
+  background: #ffde7d;
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+  background: transparent !important;
 }
+
 .section3-part-3 {
+  gap: 2px;
   flex: 0 0 15%;
   background: #ffde7d;
   display: flex;
@@ -156,7 +213,7 @@
 }
 .section2-part-2 {
   flex: 0 0 70%;
-  background: #dfdddf;
+  background: #fafafa !important;
   color: #fff;
   display: flex;
   align-items: center;
@@ -164,7 +221,7 @@
 }
 .section2-part-3 {
   flex: 0 0 15%;
-  background: #ff7f50;
+  background: #f6416c !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,14 +234,16 @@
 }
 .part-1 {
   flex: 0 0 35%;
-  background: #ff6f61;
+  background: #ffde7d !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .part-2 {
   flex: 0 0 12%;
-  background: #f7cac9;
+  color: #fff;
+  font-size: large;
+  background: #131313;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,7 +257,7 @@
 }
 .part-4 {
   flex: 0 0 26%;
-  background: #034f84;
+  background: #ebeced;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,3 +355,58 @@ html, body {
 .read-the-docs {
   color: #888;
 }
+.barcode-input {
+  width: 90%;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.barcode-input:focus { border-color: #f6416c; }
+
+.buy-now-btn {
+  width: 90%;
+  min-width: 0;
+  max-width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #e10b0f;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.advance-draw-btn  {
+  width: 90%;
+  border: none;
+  border-radius: 6px;
+  background: #1a2d5a;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.advance-sum-btn {
+  border: none;
+  border-radius: 6px;
+  background: #1a2d5a;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.advance-sum-btn {
+  flex: 1;
+  margin: 0 2px;
+}
+
+
